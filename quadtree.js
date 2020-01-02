@@ -80,7 +80,7 @@ class QuadTree {
   
   query(range, found) {
     if (!this.boundary.intersects(range)) {
-      return;
+      return found;
     } else {
       for (let p of this.points) {
         if (range.contains(p)) {
